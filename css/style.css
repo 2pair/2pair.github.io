@@ -1,0 +1,129 @@
+a {
+  text-decoration: none; 
+}
+
+a:link, a:visited {
+  color: #595959;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+  color: #A0A0A0;
+}
+
+body {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1600px;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'Sans-Serif';
+  background-color: #F0F1F0;
+  color: #3E3E3E;
+  font-size: medium;
+    
+}
+
+nav {
+  font-family: 'Montserrat', 'Sans=Serif';
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  font-weight: bold;
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-align: center;
+  margin: 0px 30px;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -webkit-transition-timing-function: cubic-bezier(0,1,.78,1);
+  transition-timing-function: cubic-bezier(0,1,.78,1);
+}
+
+nav ul li a:link, nav ul li a:visited {
+  color: #595F59;
+}
+
+nav ul li a:hover {
+  text-decoration: overline underline;
+  background-color: #E2E3E2;
+}
+
+nav ul li a:active {
+  text-decoration: overline underline;
+  color: #A0A2A0;
+}
+
+nav ul li.menu {
+  display: none;
+}
+
+/* When the screen is less than 750 pixels wide, hide all list items, 
+except for the first one ("Home"). Show the list item that contains 
+the link to open and close the nav menu (li.menu) */
+@media screen and (max-width:750px) {
+  nav {
+    min-width: 250px;
+  }
+  nav ul li:not(:first-child) {
+    display: none;
+  }
+  nav ul li.menu {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the list with JavaScript when 
+the user clicks on the icon. This class makes the nav look good on 
+small screens */
+@media screen and (max-width:750px) {
+  nav ul.responsive {
+    position: relative;
+  }
+  nav ul.responsive li.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav ul.responsive li {
+    float: none;
+    display: inline;
+  }
+  nav ul.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+#contents h1{
+  font-family: 'Montserrat', 'Sans=Serif';
+  color: #2F312F;
+  font-size: 250%;
+  margin: 30px 18%;
+}
+
+#contents p{
+  font-size: 125%;
+}
+
+footer {
+  margin: 100px auto;
+}
